@@ -1,4 +1,38 @@
-[
+[ 
+  {
+    "file": "figma-weavy-acquisition.md",
+    "title": "Figma, AI 미디어 생성 스타트업 Weavy 인수 완벽 정리 - 2025 최신 업데이트",
+    "date": "2025-10-30",
+    "tags": [
+      "AI",
+      "Figma",
+      "Weavy",
+      "이미지생성",
+      "동영상생성",
+      "디자인",
+      "M&A"
+    ],
+    "category": "기술",
+    "description": "Figma가 AI 이미지·영상 생성 스타트업 Weavy를 인수. Figma Weave 브랜드 통합, 노드 기반 생성 워크플로, 멀티모델 편집 기능 등 핵심을 정리합니다.",
+    "excerpt": "Figma가 Weavy를 인수하며 생성형 이미지·영상 워크플로를 Figma에 통합합니다. 노드 기반 파이프라인과 멀티모델 편집, 프로급 편집 도구가 핵심입니다."
+  },
+  {
+    "file": "ai-news-trends.md",
+    "title": "최신 AI 뉴스 트렌드 완벽 가이드 - 2025 최신 업데이트",
+    "date": "2025-10-30",
+    "tags": [
+      "AI",
+      "인공지능",
+      "트렌드",
+      "최신뉴스",
+      "기술",
+      "머신러닝",
+      "딥러닝"
+    ],
+    "category": "기술",
+    "description": "2025년 최신 AI 뉴스 트렌드를 종합 분석 - 새로운 AI 모델 출시, 투자 동향, 윤리적 이슈까지",
+    "excerpt": "2025년 AI 트렌드를 총정리합니다. 최신 모델(Gemini 2.5, Claude 3.7 등), 빅테크 투자, 윤리 이슈와 실전 적용 사례를 한눈에 정리했습니다."
+  },
   {
     "file": "javascript-async.md",
     "title": "JavaScript 비동기 프로그래밍 완벽 가이드",
