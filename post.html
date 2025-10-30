@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="post-title">게시글</title>
+    <meta name="description" id="post-description" content="">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
+
+    <!-- Open Graph 메타 태그들 (JavaScript에서 동적으로 설정) -->
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="article:published_time" id="article-published-time" content="">
+    <meta property="article:tag" id="article-tags" content="">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="back-link">← 홈으로</a>
+            <h1 class="site-title">블로그</h1>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" title="다크/라이트 모드 전환">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <article class="post">
+                <header class="post-header">
+                    <h1 id="post-title-display"></h1>
+                    <div class="post-meta">
+                        <time id="post-date" class="post-date"></time>
+                        <div id="post-tags" class="post-tags"></div>
+                        <div id="post-category" class="post-category"></div>
+                    </div>
+                </header>
+
+                <div id="post-content" class="post-content">
+                    <!-- 게시글 내용이 여기에 로드됩니다 -->
+                </div>
+
+                <nav class="post-navigation">
+                    <a id="prev-post" href="#" class="nav-link prev-link" style="display: none;">
+                        ← 이전 글
+                    </a>
+                    <a id="next-post" href="#" class="nav-link next-link" style="display: none;">
+                        다음 글 →
+                    </a>
+                </nav>
+            </article>
+
+            <!-- 댓글 섹션 -->
+            <section class="comments-section">
+                <h3>댓글</h3>
+                <div id="giscus-container" class="giscus-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 블로그. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript 파일들 -->
+    <script src="js/theme.js"></script>
+    <script src="js/post-loader.js"></script>
+</body>
+</html>

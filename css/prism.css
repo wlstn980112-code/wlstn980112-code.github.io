@@ -1,0 +1,256 @@
+/* PrismJS 테마 - 다크/라이트 모드 지원 */
+
+:root {
+  --prism-bg: #f6f8fa;
+  --prism-text: #24292f;
+  --prism-comment: #6a737d;
+  --prism-punctuation: #586069;
+  --prism-keyword: #d73a49;
+  --prism-string: #032f62;
+  --prism-function: #6f42c1;
+  --prism-number: #005cc5;
+  --prism-boolean: #005cc5;
+  --prism-property: #005cc5;
+  --prism-selector: #6f42c1;
+  --prism-attr-name: #22863a;
+  --prism-operator: #d73a49;
+}
+
+[data-theme="dark"] {
+  --prism-bg: #2d3748;
+  --prism-text: #e2e8f0;
+  --prism-comment: #718096;
+  --prism-punctuation: #a0aec0;
+  --prism-keyword: #fc8181;
+  --prism-string: #68d391;
+  --prism-function: #9f7aea;
+  --prism-number: #63b3ed;
+  --prism-boolean: #63b3ed;
+  --prism-property: #63b3ed;
+  --prism-selector: #9f7aea;
+  --prism-attr-name: #68d391;
+  --prism-operator: #fc8181;
+}
+
+/* PrismJS 기본 스타일 */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--prism-text);
+  background: var(--prism-bg);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+/* PrismJS 토큰 스타일 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--prism-comment);
+}
+
+.token.punctuation {
+  color: var(--prism-punctuation);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--prism-property);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--prism-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--prism-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.string,
+.token.variable {
+  color: var(--prism-text);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--prism-function);
+}
+
+.token.keyword {
+  color: var(--prism-keyword);
+}
+
+.token.regex,
+.token.important {
+  color: var(--prism-operator);
+}
+
+/* 언어별 특정 스타일 */
+.language-css .token.string,
+.language-scss .token.string,
+.language-less .token.string {
+  color: var(--prism-string);
+}
+
+.language-css .token.property,
+.language-scss .token.property,
+.language-less .token.property {
+  color: var(--prism-attr-name);
+}
+
+.language-css .token.selector,
+.language-scss .token.selector,
+.language-less .token.selector {
+  color: var(--prism-selector);
+}
+
+.language-javascript .token.function,
+.language-typescript .token.function {
+  color: var(--prism-function);
+}
+
+.language-python .token.function {
+  color: var(--prism-function);
+}
+
+.language-json .token.property {
+  color: var(--prism-property);
+}
+
+/* 라인 하이라이트 */
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid var(--prism-punctuation);
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: var(--prism-comment);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/* 툴바 (복사 버튼 등) */
+pre[class*="language-"] + .toolbar {
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em;
+  background: var(--prism-bg);
+  border-radius: 0 0 0.3em 0.3em;
+}
+
+.toolbar button {
+  background: none;
+  border: 1px solid var(--prism-punctuation);
+  color: var(--prism-text);
+  padding: 0.25em 0.5em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  transition: background-color 0.2s ease;
+}
+
+.toolbar button:hover {
+  background: var(--prism-punctuation);
+  color: var(--prism-bg);
+}
+
+/* 커맨드 라인 프롬프트 */
+.command-line-prompt {
+  border-right: 1px solid var(--prism-punctuation);
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -1px;
+  margin-right: 1em;
+  pointer-events: none;
+  text-align: right;
+  user-select: none;
+  vertical-align: middle;
+  width: 1em;
+}
+
+.command-line-prompt > span:before {
+  color: var(--prism-comment);
+  content: '$';
+  display: block;
+  padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
+}
+
+.command-line-prompt > span[data-user][data-host]:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
+}
