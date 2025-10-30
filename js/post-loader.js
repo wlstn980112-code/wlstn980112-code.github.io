@@ -171,15 +171,15 @@ function loadGiscus() {
   script.src = 'https://giscus.app/client.js';
   script.async = true;
 
-  // Giscus 설정 (여기서 설정을 변경하세요)
-  script.setAttribute('data-repo', 'your-github-username/your-github-username.github.io');
-  script.setAttribute('data-repo-id', 'YOUR_REPO_ID');
+  // Giscus 설정 (GitHub Discussions 기반 댓글 시스템)
+  script.setAttribute('data-repo', 'wlstn980112-code/wlstn980112-code.github.io');
+  script.setAttribute('data-repo-id', 'R_kgDOQMJHCA');
   script.setAttribute('data-category', 'General');
-  script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID');
+  script.setAttribute('data-category-id', 'DIC_kwDOQMJHCM4CxQbY');
   script.setAttribute('data-mapping', 'pathname');
   script.setAttribute('data-strict', '0');
   script.setAttribute('data-reactions-enabled', '1');
-  script.setAttribute('data-emit-metadata', '1');
+  script.setAttribute('data-emit-metadata', '0');
   script.setAttribute('data-input-position', 'bottom');
   script.setAttribute('data-theme', 'preferred_color_scheme');
   script.setAttribute('data-lang', 'ko');
